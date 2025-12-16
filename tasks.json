@@ -53,9 +53,12 @@
   },
   {
     "label": "Television File Finder",
-    "command": "zed \"$(tv files)\"",
+    "command": "zeditor \"$(tv --input '${ZED_SELECTED_TEXT:-}' --exact text)\"",
     "hide": "always",
     "allow_concurrent_runs": true,
-    "use_new_terminal": true
+    "use_new_terminal": true,
+    "shell": {
+      "program": "/bin/bash"
+    }
   }
 ]

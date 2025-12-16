@@ -96,6 +96,7 @@
         "task::Spawn",
         { "task_name": "Television File Finder", "reveal_target": "center" }
       ],
+
       // Project search
       "space /": "pane::DeploySearch",
       // TODO: Open other files
@@ -108,7 +109,11 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       // Open file finder
-      "space space": "file_finder::Toggle",
+      // default "file_finder::Toggle"
+      "space space": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" }
+      ],
       // Open recent project
       "space f p": "projects::OpenRecent"
     }
