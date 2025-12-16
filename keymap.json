@@ -94,7 +94,12 @@
       // File finder
       "space space": [
         "task::Spawn",
-        { "task_name": "Television File Finder", "reveal_target": "center" }
+        { "task_name": "File Finder", "reveal_target": "center" }
+      ],
+      // Live grep (search text in files)
+      "space s g": [
+        "task::Spawn",
+        { "task_name": "Live Grep", "reveal_target": "center" }
       ],
 
       // Project search
@@ -112,7 +117,7 @@
       // default "file_finder::Toggle"
       "space space": [
         "task::Spawn",
-        { "task_name": "Television File Finder", "reveal_target": "center" }
+        { "task_name": "File Finder", "reveal_target": "center" }
       ],
       // Open recent project
       "space f p": "projects::OpenRecent"
@@ -162,7 +167,13 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-j": "workspace::ActivatePaneDown",
+      // tv navigation (vim-style)
+      "alt-j": ["workspace::SendKeystrokes", "down"],
+      "alt-k": ["workspace::SendKeystrokes", "up"],
+      // tv preview scroll
+      "alt-d": ["workspace::SendKeystrokes", "pagedown"],
+      "alt-u": ["workspace::SendKeystrokes", "pageup"]
     }
   },
   // File panel (netrw)
